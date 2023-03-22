@@ -24,28 +24,21 @@ console.log(lastDrivers)
 
 const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers];
 
-//trippler fare 
+//
 const createFareMultiplier = function (integer) {
     return function (fare) {
       return fare * integer;
     };
   };
 
-  const trippleFare = createFareMultiplier(3);
-  const fare = 20;
-  const trippledFare = trippleFare(fare);
-  console.log(trippledFare);
-
+ 
 
 //double fare
+const fareDoubler = createFareMultiplier(2);
 
-const fareDoubler = function (int) {
-    return function (fare2) {
-      return fare2 * int;
-    };
-  };
-
-  const doubleFare = fareDoubler(2);
-  const fare2 = 20;
-  const doubledFare = doubleFare(fare);
-  console.log(doubledFare);
+//trippler fare 
+const fareTripler = createFareMultiplier(3);
+// select fiffrent drivers
+const selectDifferentDrivers = function(drivers, returnDriversFunction) {
+  return returnDriversFunction(drivers);
+};
